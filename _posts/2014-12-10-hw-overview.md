@@ -26,7 +26,7 @@ Board A - CPU
 * <span style="color:red">&#x25cf;</span> L13602-ADJ - ??? (National Semi)
 * <span style="color:orange">&#x25cf;</span> A14E - ???
 * <span style="color:yellow">&#x25cf;</span> XM51 - ???
-* <span style="color:green">&#x25cf;</span> 4337UF - looks like 24AA05 I2C EEPROM
+* <span style="color:green">&#x25cf;</span> RTC: [uSOP8 4337UF - DS1337](http://datasheets.maximintegrated.com/en/ds/DS1337-DS1337C.pdf)
 
 
 Board B - Sensor
