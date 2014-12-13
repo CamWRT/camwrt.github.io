@@ -111,5 +111,27 @@ PINMUX4: 0x0030C000
 {% endhighlight %}
 
 
+Peripheral device pins
+----------------------
+
+* McBSP (but i don't see any codec on board)
+  - GIO49..GIO44 - i2s/codec signals
+* Video In - all enabled (YIN, default?)
+* Vidio Out - all disabled (COUT, GIO mode)
+* I2C
+  - GIO21 - I2C_SDA
+  - GIO20 - I2C_SCL (note some magic in dmesg with this pin)
+* UART1
+  - GIO25 - UART1_TXD
+  - GIO34 - UART1_RXD
+* UART0 (console)
+  - GIO19 - UART0_RXD
+  - GIO18 - UART0_RXD
+* EMAC (Ethernet)
+  - GIO17..GIO1 - MII signals
+* Clock output (image sensor clock)
+  - GIO37 - CLKOUT0
+
+
 [sprufg5a]: http://www.ti.com/lit/ug/sprufg5a/sprufg5a.pdf
 [dtools]: https://github.com/CamWRT/dm36x_debug_tools
