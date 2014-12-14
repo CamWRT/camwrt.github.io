@@ -133,5 +133,39 @@ Peripheral device pins
   - GIO37 - CLKOUT0
 
 
+Trying to guess GPIOs
+---------------------
+
+Using d_gpio utility i found what GIOs set to output.
+
+{% highlight text %}
+# /tmp/ipnc/d_gpio 
+DIR 01: 0xC3EFFFFF: I I O O O O I I  I I I O I I I I  I I I I I I I I  I I I I I I I I  
+IN  01: 0x63000000: 0 1 1 0 0 0 1 1  0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0  
+DIR 23: 0x3EF3FFF5: O O I I I I I O  I I I I O O I I  I I I I I I I I  I I I I O I O I  
+IN  23: 0x000C001A: 0 0 0 0 0 0 0 0  0 0 0 0 1 1 0 0  0 0 0 0 0 0 0 0  0 0 0 1 1 0 1 0  
+DIR 45: 0xE67DFFFE: I I I O O I I O  O I I I I I O I  I I I I I I I I  I I I I I I I O  
+IN  45: 0x09880061: 0 0 0 0 1 0 0 1  1 0 0 0 1 0 0 0  0 0 0 0 0 0 0 0  0 1 1 0 0 0 0 1  
+DIR  6: 0xFFFFFFFF: I I I I I I I I  I I I I I I I I  I I I I I I I I  I I I I I I I I  
+IN   6: 0x00000000: 0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0  
+{% endhighlight %}
+
+Then i try to change GIO state via `echo 1 > /proc/gio/gioX` and found IR CUT control lines:
+
+- GIO26: state 1 (need to determine filter type)
+- GIO27: state 2
+
+Just send 1 to one of that GIO and filter will flip, then disable coils by setting all to 0.
+
+
+Findings:
+
+- GIO28: controls IR LEDs power (side connector on module)
+- GIO33: red status LED (inverted).
+- GIO50: possible PHY reset (when i pull it 0, eth link led is off, ping fails)
+- GIO51: ??? maybe sensor reset? need more testings.
+- GIO92: immediately reboot after setting 1!
+
+
 [sprufg5a]: http://www.ti.com/lit/ug/sprufg5a/sprufg5a.pdf
 [dtools]: https://github.com/CamWRT/dm36x_debug_tools
