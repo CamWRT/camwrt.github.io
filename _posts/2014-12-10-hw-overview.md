@@ -18,7 +18,7 @@ Board A - CPU
 * <span style="color:yellow">&#x25cf;</span> NAND: [Macronix MX30LF1G08AA](http://www.macronix.com/en-us/Product/Pages/ProductDetail.aspx?PartNo=MX30LF1G08AA)
 * <span style="color:green">&#x25cf;</span> ETH PHY: [Micrell KSZ8041NL](http://www.micrel.com/_PDF/Ethernet/datasheets/ksz8041nl.pdf)
 * <span style="color:blue">&#x25cf;</span> [SOT23 C08K - SN74VC1G08](http://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf)
-* <span style="color:violet">&#x25cf;</span> TS81 - ???
+* <span style="color:violet">&#x25cf;</span> TS81 - ??? (some sort or unique id chip. original software spams about "illegal copy" if it can't read TS80).
 
 
 ![board A botton](/files/hw-overview/brd_a_bottom.jpg)
