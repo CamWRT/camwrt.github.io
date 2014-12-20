@@ -157,6 +157,16 @@ EDMA_EVTMUX: 0x0003C000
         EVT12: 0
         EVT3: 0
         EVT2: 0
+VDAC_CONFIG: 0x081141CF
+        TVSHORT: 0
+        TVINT: 0
+        PDTVSHORTZ: 0
+        XDMODE: 0
+        PWDNZ_TVDETECT: 0
+        PWDNBUFZ: 1
+        PWD_C: 1
+        PWD_B: 1
+        PWD_A: 1
 {% endhighlight %}
 
 
@@ -216,7 +226,7 @@ Findings:
 - GIO92: immediately reboot after setting 1!
 
 
-*Update 20.12.2014*: Add intmux/evtmux values.
+*Update 20.12.2014*: Add intmux/evtmux/vdac values.
 
 [sprufg5a]: http://www.ti.com/lit/ug/sprufg5a/sprufg5a.pdf
 [dtools]: https://github.com/CamWRT/dm36x_debug_tools
