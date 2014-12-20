@@ -167,6 +167,24 @@ VDAC_CONFIG: 0x081141CF
         PWD_C: 1
         PWD_B: 1
         PWD_A: 1
+USB_PHY_CTRL: 0x000021E0
+        PHYCLKFREQ: 2
+        DATAPOL: 0
+        PHYCLKSRC: 0
+        PHYCLKGD: 1
+        SESNDEN: 1
+        VBDTCTEN: 1
+        VBUSENS: 1
+        PHYPLLON: 0
+        OTGPDWN: 0
+        PHYPDWN: 0
+VPSS_CLK_CTRL: 0x00000038
+        VPSS_CLKMD: 0
+        VENC_CLK_SRC: 1
+        DACCLKEN: 1
+        VENCCLKEN: 1
+        PCLK_INV: 0
+        VPSS_MUXSEL: 0
 {% endhighlight %}
 
 
