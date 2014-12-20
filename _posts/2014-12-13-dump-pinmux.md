@@ -185,6 +185,18 @@ VPSS_CLK_CTRL: 0x00000038
         VENCCLKEN: 1
         PCLK_INV: 0
         VPSS_MUXSEL: 0
+PERI_CLKCTRL: 0x243F04FC
+        PRTCSSCLKS: 0
+        ARMCLKS: 1
+        KEYSCLKS: 0
+        DDRCLKS: 0
+        HDVICPCLKS: 1
+        DIV3: 0x03F
+        DIV2: 0x009
+        DIV1: 0x0F
+        CLOCKOUT2EN: 1
+        CLOCKOUT1EN: 0
+        CLOCKOUT0EN: 0
 {% endhighlight %}
 
 
