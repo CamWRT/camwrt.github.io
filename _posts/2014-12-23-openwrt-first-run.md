@@ -110,4 +110,6 @@ See ASCIINema's
 <script type="text/javascript" src="https://asciinema.org/a/14971.js" id="asciicast-14971" async></script>
 
 
+*Update*: script image generation and uImage aligning now added in build script.
+
 [cwrt-gh]: https://github.com/CamWRT/openwrt-davinci
